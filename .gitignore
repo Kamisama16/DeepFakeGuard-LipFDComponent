@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Model weights (download separately — too large for git)
+weights/*.pth
+weights/*.pt
+weights/*.ckpt
+
+# Datasets (store separately)
+DFDC_Dataset/
+FakeAVCeleb_v1.2/
+Wav2Lip*/
+
+# Test videos
+test videos/
+
+# Benchmark results
+results_*.csv
+benchmark_results.csv
+
+# Temp files
+*.tmp
+*.log

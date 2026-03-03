@@ -1,0 +1,15 @@
+# Dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+opencv-python>=4.8.0
+librosa>=0.10.0
+matplotlib>=3.7.0
+
+# CLIP (OpenAI)
+# Install via: pip install git+https://github.com/openai/CLIP.git
+# or: pip install openai-clip packaging
+packaging
+
+# Optional — for benchmark metrics
+scikit-learn>=1.3.0
