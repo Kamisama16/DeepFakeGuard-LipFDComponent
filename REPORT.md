@@ -74,6 +74,10 @@ Balanced evaluation: 250 real vs 250 fake per deepfake type.
 | **FakeVideo-FakeAudio** | Lip-sync video + synthesised audio | **91.2%** | **0.962** | 88.4% | 94.8% | 0.915 |
 | **FakeVideo-RealAudio** | Face-swap video + original audio | 75.2% | 0.821 | 83.5% | 62.8% | 0.717 |
 | **RealVideo-FakeAudio** | Real video + synthesised audio only | 49.6% | 0.513 | 48.3% | 11.6% | 0.187 |
+| **RealVideo-RealAudio** | Genuine content — specificity test | 87.6% TNR | — | — | — | — |
+
+> **Note on RealVideo-RealAudio**: The 250 genuine videos were used as the negative class in all three benchmark runs above, yielding consistent results each time.  A standalone run is therefore redundant — the real-class performance is captured in every row.
+> Result: **219/250 correctly classified as REAL** (87.6% specificity / true negative rate), **31/250 false positives** (FPR = 12.4%).
 
 **Confusion matrices:**
 ```

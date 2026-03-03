@@ -85,11 +85,15 @@ python main.py --video video.mp4 --weights weights/lipfd_ckpt.pth
 
 ### FakeAVCeleb v1.2 (250 per class, balanced)
 
-| Deepfake Type | Accuracy | AUROC | Recall | F1 |
-|---|---|---|---|---|
-| FakeVideo-FakeAudio (lip-sync + synth audio) | **91.2%** | **0.962** | 94.8% | 0.915 |
-| FakeVideo-RealAudio (face-swap + real audio) | 75.2% | 0.821 | 62.8% | 0.717 |
-| RealVideo-FakeAudio (real video + synth audio) | 49.6% | 0.513 | 11.6% | 0.187 |
+| Subset | Description | Accuracy | AUROC | Recall | F1 |
+|---|---|---|---|---|---|
+| FakeVideo-FakeAudio | Lip-sync video + synthesised audio | **91.2%** | **0.962** | 94.8% | 0.915 |
+| FakeVideo-RealAudio | Face-swap video + original audio | 75.2% | 0.821 | 62.8% | 0.717 |
+| RealVideo-FakeAudio | Real video + synthesised audio only | 49.6% | 0.513 | 11.6% | 0.187 |
+| **RealVideo-RealAudio** | **Genuine content (specificity test)** | **87.6% TNR** | — | — | — |
+
+> **RealVideo-RealAudio** was used as the negative class (250 videos) in all three runs above.
+> The model correctly identifies 219/250 (87.6%) real videos as REAL, with a 12.4% false positive rate.
 
 ### DFDC (800 videos, face-swap, no audio)
 
